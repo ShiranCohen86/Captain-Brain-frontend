@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+#root {
+  height: 100%;
+}
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-color: $clr1;
+  color: $clr3;
+  font-family: "Circular";
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0 0;
+  font-size: rem(24px);
+  //line-height: 1;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: rem(16px);
+  //color: $clr4;
+}
+
+label {
+  //color: $clr5;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
+li {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+  overflow: auto;
+}
+
+/* ROUTES */
+
+a {
+  text-decoration: none;
+  color: $clr7;
+  cursor: pointer;
+}
+
+a:focus,
+a.router-link-exact-active {
+  font-weight: bold;
+  color: $clr2;
+}
+
+hr {
+  background-color: rgba(9, 30, 66, 0.13);
+  border: 0;
+  height: 1px;
+  margin: 0;
+  margin-inline-start: 10px;
+  margin-inline-end: 10px;
+}
+
+/* BUTTON */
+
+button {
+  cursor: pointer;
+  //color: $clr5;
+}
+button:hover {
+  background-color: #64c989;
+  transition: 1s;
+}
+
+i {
+  cursor: pointer;
+}
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
