@@ -1,9 +1,8 @@
 .home-page {
-    grid-area: body;
-    display: flex;
-    flex-direction: column;
-    column-gap: rem(20px);
-    
+    //grid-area: body;
+    //display: flex;
+    //flex-direction: column;
+    //column-gap: rem(20px);
     @include for-narrow-layout {
         // margin: auto 10px;
     }

@@ -4,6 +4,7 @@ export const getAvailableModels = () => {
   return async (dispatch) => {
     try {
       const models = await openAiService.getAvailableModels();
+
       dispatch({ type: "AVAILABLE_MODELS", models });
     } catch (error) {
       throw error

@@ -10,9 +10,12 @@ html {
 
 body {
   height: 100%;
+  div {
+   // height: 100%;
+  }
   margin: 0;
-  background-color: $clr1;
-  color: $clr3;
+  //background-color: $clr1;
+  //color: $clr3;
   font-family: "Circular";
 }
 body::-webkit-scrollbar {
