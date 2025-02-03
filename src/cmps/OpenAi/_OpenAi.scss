@@ -1,4 +1,24 @@
-.openAi {
+.open-ai {
+    display: grid;
+    @include for-mobile-layout {
+        grid-template-areas:
+            "chat-log"
+            "main";
+        grid-template-rows: 1fr 50px;
+        .chat-log {
+            grid-area: chat-log;
+            padding: 0 10px;
+        }
+        .user-input {
+            grid-area: main;
+            display: flex;
+            justify-content: space-between;
+            input{
+                width: 100%;
+            }
+        }
+    }
+
     #content h1 {
         color: #2c3e50;
     }
@@ -16,20 +36,4 @@
         font-size: 1.2em;
         line-height: 1.5em;
     }
-
-    .user-input {
-        position: absolute;
-        bottom: 0;
-        * {
-            height: 30px;
-        }
-        input{
-            width: 500px;
-        }
-    }
-
-    .chat{
-        margin: auto 70px;
-    }
-    
 }

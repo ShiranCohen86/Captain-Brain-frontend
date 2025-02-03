@@ -15,11 +15,10 @@ function App() {
   return (
     <Router>
       <div className="App main-layout">
-        <div className="routes-main">
-          <Routes>
-            <Route element={<HomePage />} path="/" />
-          </Routes>
-        </div>
+
+        <Routes>
+          <Route element={<HomePage />} path="/" />
+        </Routes>
 
       </div>
     </Router>

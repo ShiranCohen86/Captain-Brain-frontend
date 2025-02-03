@@ -1,25 +1,17 @@
 import { useState } from 'react';
 import { openAiService } from '../../services/openAiService';
-import { useSelector } from 'react-redux';
 
 
 const OpenAi = () => {
-  const models = useSelector((state) => state.OpenAiReducer.availableModels) || [];
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
-  const [selectedModel, setSelectedModel] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
 
   const handleSend = async () => {
     if (!input.trim()) return;
 
-    const userMessage = {
-      role: 'user',
-      content: input
-    }
-
-    setMessages((prev) => [...prev, userMessage]);
+    setMessages((prev) => [...prev, { role: 'user', content: input }]);
     setInput('');
     setIsLoading(true);
 
@@ -35,16 +27,16 @@ const OpenAi = () => {
   };
 
   return (
-    <div className='openAi'>
-      <div className='chat'>
-      {messages.map((msg, index) => (
-        <div key={index} style={{ textAlign: msg.role === 'user' ? 'right' : 'left' }}>
-          <b>{msg.role === 'user' ? 'You' : 'GPT'}:</b>
-          <div id="content" dangerouslySetInnerHTML={{ __html: msg.content }}>
+    <div className='open-ai'>
+      <div className='chat-log'>
+        {messages.map((msg, index) => (
+          <div key={index} style={{ textAlign: msg.role === 'user' ? 'right' : 'left' }}>
+            <b>{msg.role === 'user' ? 'You' : 'GPT'}:</b>
+            <div id="content" dangerouslySetInnerHTML={{ __html: msg.content }}>
 
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
       </div>
       <div className='user-input'>
         <input

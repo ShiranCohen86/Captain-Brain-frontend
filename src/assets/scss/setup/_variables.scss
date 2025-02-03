@@ -15,8 +15,7 @@ $bclr4: #89609e;
 $bclr5: #051e8c;
 
 // LAYOUT BREAKPOINTS
-$break-wide: 2000px;
-$break-normal: 1200px;
-$break-medium:900px;
-$break-narrow: 700px;
-$break-mobile: 550px;
+$break-large-desktop-max-width: 1441px;
+$break-small-desktop-max-width:1440px;
+$break-tablet-max-width: 1280px;
+$break-mobile-max-width: 480px;

@@ -1,9 +1,21 @@
 .home-page {
-    //grid-area: body;
-    //display: flex;
-    //flex-direction: column;
-    //column-gap: rem(20px);
-    @include for-narrow-layout {
-        // margin: auto 10px;
+    height: 100vh;
+    display: grid;
+
+    @include for-mobile-layout {
+        grid-template-areas:
+            "head head"
+            "main main";
+        grid-template-rows: 50px 1fr;
+        grid-template-columns: 150px 1fr;
+        .home-page-header {
+            grid-area: head;
+            text-align: center;
+        }
+
+        .open-ai {
+            grid-area: main;
+            overflow: hidden;
+        }
     }
 }
