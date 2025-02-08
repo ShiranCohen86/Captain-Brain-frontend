@@ -29,7 +29,7 @@
 //aspect ratio mixin
 @mixin aspect-ratio($width, $height) {
   position: relative;
-  overflow: hidden;
+  //overflow: hidden;
   &:before {
     content: '';
     display: block;

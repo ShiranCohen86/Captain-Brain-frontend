@@ -20,7 +20,18 @@ const getAvailableModels = async () => {
   }
 };
 
+const consoleBackend = async (text) => {
+  try {
+    const response = await httpService.post("openAi/console/", {text});
+    return response
+  } catch (error) {
+    console.error('Error fetching chat response:', error);
+    throw error;
+  }
+};
+
 export const openAiService = {
   askAiQuestion,
-  getAvailableModels
+  getAvailableModels,
+  consoleBackend
 }

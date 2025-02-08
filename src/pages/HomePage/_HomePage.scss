@@ -1,13 +1,14 @@
 .home-page {
-    height: 100vh;
     display: grid;
+    height: 100%;
 
     @include for-mobile-layout {
         grid-template-areas:
             "head head"
             "main main";
-        grid-template-rows: 50px 1fr;
+        grid-template-rows: 40px auto;
         grid-template-columns: 150px 1fr;
+
         .home-page-header {
             grid-area: head;
             text-align: center;
@@ -15,7 +16,6 @@
 
         .open-ai {
             grid-area: main;
-            overflow: hidden;
         }
     }
 }

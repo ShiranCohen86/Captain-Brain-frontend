@@ -1,19 +1,16 @@
 .open-ai {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     @include for-mobile-layout {
-        grid-template-areas:
-            "chat-log"
-            "main";
-        grid-template-rows: 1fr 50px;
         .chat-log {
-            grid-area: chat-log;
-            padding: 0 10px;
+            padding: 8px 10px;
         }
         .user-input {
-            grid-area: main;
             display: flex;
-            justify-content: space-between;
-            input{
+
+            input {
                 width: 100%;
             }
         }
@@ -36,4 +33,8 @@
         font-size: 1.2em;
         line-height: 1.5em;
     }
+}
+.active {
+    height: 100px;
+    transition: height 20s ease-in-out 5s;
 }
